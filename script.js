@@ -2,6 +2,12 @@ console.log("Let's play rock, paper, scissors!");
 
 function getHumanChoice() {
     let userInput = prompt("Choose rock, paper, or scissors", "Type your choice here").toLowerCase();
+    let invalidChoice = !!("rock" || "paper" || "scissors")
+    while (userInput = invalidChoice) {
+        console.log(userInput);
+        break;
+    }; 
+
     switch (userInput) {
         case "rock":
             console.log("Rock");
