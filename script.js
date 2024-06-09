@@ -8,11 +8,6 @@ console.log("Let's play rock, paper, scissors!");
     }
 }*/
 
-/*function getScore(computerScore, humanScore) {
-    return `Human score: ${humanScore}, Computer Score: ${computerScore}`;
-}*/
-
-
 function playRound() { 
     function getHumanChoice() {
         let userInput = prompt("Choose rock, paper, or scissors", "Type your choice here").toLowerCase();
