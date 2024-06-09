@@ -74,19 +74,19 @@ function playRound() {
 function getScore() {
     let humanScore = 0;
     let computerScore = 0;
-    if (playRound() === console.log("You win! Rock beats scissors!")
-        || playRound() === console.log("You win! Paper beats rock!")
-        || playRound() === console.log("You win! Scissors beats paper!")) {
+    var result = playRound();
+    if (result === console.log("You win! Rock beats scissors!")
+        || result === console.log("You win! Paper beats rock!")
+        || result === console.log("You win! Scissors beats paper!")) {
         return console.log(`Human score: ${(++humanScore)}, Computer score: ${computerScore}`);
     }
-    else if (playRound() === console.log("You lose! Paper beats rock!")
-        || playRound() === console.log("You lose! Scissors beats paper!")
-        || playRound() === console.log("You lose! Rock beats scissors!")) {
+    else if (result === console.log("You lose! Paper beats rock!")
+        || result === console.log("You lose! Scissors beats paper!")
+        || result === console.log("You lose! Rock beats scissors!")) {
         return console.log(`Human score: ${humanScore}, Computer score: ${(++computerScore)}`);
     }
-    else if (playRound() === console.log("Tie! Play again.")) {
+    else if (result === console.log("Tie! Play again.")) {
         return console.log(`Human score: ${humanScore}, Computer score: ${computerScore}`);
     }
 }
-    
 getScore();
