@@ -105,4 +105,3 @@ function getScore() {
         return console.log(`Human score: ${humanScore}, Computer score: ${computerScore}`);
     }
 }
-getScore();
