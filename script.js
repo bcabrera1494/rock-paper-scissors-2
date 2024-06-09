@@ -12,9 +12,6 @@ console.log("Let's play rock, paper, scissors!");
     return `Human score: ${humanScore}, Computer Score: ${computerScore}`;
 }*/
 
-computerScore = 0
-humanScore = 0
-
 
 function playRound() { 
     function getHumanChoice() {
@@ -54,33 +51,49 @@ function playRound() {
         return console.log("Tie! Play again.")
     }
     else if(humanChoice === "Rock" && computerChoice === "Paper") {
-        //++computerScore;
         console.log("You lose! Paper beats rock!");
     }
     else if(humanChoice === "Rock" && computerChoice === "Scissors") {
-        //++humanScore;
         console.log("You win! Rock beats scissors!");
     }
     else if(humanChoice === "Paper" && computerChoice === "Scissors") {
-        //++computerScore;
         console.log("You lose! Scissors beats paper!");
     }
     else if(humanChoice === "Paper" && computerChoice === "Rock") {
-        //++humanScore;
         console.log("You win! Paper beats rock!");
     }
     else if(humanChoice === "Scissors" && computerChoice === "Rock") {
-        //++computerScore
         console.log("You lose! Rock beats scissors!");
     }
     else if(humanChoice === "Scissors" && computerChoice === "Paper") {
-        //++humanScore
         console.log("You win! Scissors beats paper!");
     }
-}
+   
+
+    }
 
 playRound();
 
+/*
+function getScore() {
+    let humanScore = 0;
+    let computerScore = 0;
+    if (playRound() === "You win! Rock beats scissors!"
+        || playRound() === "You win! Paper beats rock!"
+        || playRound() === "You win! Scissors beats paper!") {
+        return `Human score: ${(++humanScore)}, Computer score: ${computerScore}`;
+    }
+    else if (playRound() === "You lose! Paper beats rock!"
+        || playRound() === "You lose! Scissors beats paper!"
+        || playRound() === "You lose! Rock beats scissors!") {
+        return `Human score: ${humanScore}, Computer score: ${(++computerScore)}`;
+    }
+    else if (playRound() === "Tie! Play again.") {
+        return `Human score: ${humanScore}, Computer score: ${computerScore}`
+    }
+}
+*/
 
+    
 
 
