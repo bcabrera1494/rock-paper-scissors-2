@@ -38,17 +38,17 @@ function playRound() {
             return "Scissors";
         }
     }
-    getComputerChoice();
+
 
     var humanChoice = getHumanChoice();
     var computerChoice = getComputerChoice(); 
 
-    console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}`)
+    console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}`);
 
     if(humanChoice === "Rock" && computerChoice === "Rock"
         || humanChoice === "Paper" && computerChoice === "Paper"
-        || humanChoice === "Scissors" && computerChoice === "Scissors") {
-        return console.log("Tie! Play again.")
+        || humanChoice === "Scissors" && computerChoice === "ScissorT./Gs") {
+        return console.log("Tie! Play again.");
     }
     else if(humanChoice === "Rock" && computerChoice === "Paper") {
         console.log("You lose! Paper beats rock!");
@@ -69,31 +69,24 @@ function playRound() {
         console.log("You win! Scissors beats paper!");
     }
    
-
     }
 
-playRound();
-
-/*
 function getScore() {
     let humanScore = 0;
     let computerScore = 0;
-    if (playRound() === "You win! Rock beats scissors!"
-        || playRound() === "You win! Paper beats rock!"
-        || playRound() === "You win! Scissors beats paper!") {
-        return `Human score: ${(++humanScore)}, Computer score: ${computerScore}`;
+    if (playRound() === console.log("You win! Rock beats scissors!")
+        || playRound() === console.log("You win! Paper beats rock!")
+        || playRound() === console.log("You win! Scissors beats paper!")) {
+        return console.log(`Human score: ${(++humanScore)}, Computer score: ${computerScore}`);
     }
-    else if (playRound() === "You lose! Paper beats rock!"
-        || playRound() === "You lose! Scissors beats paper!"
-        || playRound() === "You lose! Rock beats scissors!") {
-        return `Human score: ${humanScore}, Computer score: ${(++computerScore)}`;
+    else if (playRound() === console.log("You lose! Paper beats rock!")
+        || playRound() === console.log("You lose! Scissors beats paper!")
+        || playRound() === console.log("You lose! Rock beats scissors!")) {
+        return console.log(`Human score: ${humanScore}, Computer score: ${(++computerScore)}`);
     }
-    else if (playRound() === "Tie! Play again.") {
-        return `Human score: ${humanScore}, Computer score: ${computerScore}`
+    else if (playRound() === console.log("Tie! Play again.")) {
+        return console.log(`Human score: ${humanScore}, Computer score: ${computerScore}`);
     }
 }
-*/
-
     
-
-
+getScore();
