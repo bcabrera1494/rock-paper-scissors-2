@@ -47,26 +47,26 @@ function playRound() {
 
     if(humanChoice === "Rock" && computerChoice === "Rock"
         || humanChoice === "Paper" && computerChoice === "Paper"
-        || humanChoice === "Scissors" && computerChoice === "ScissorT./Gs") {
-        return console.log("Tie! Play again.");
+        || humanChoice === "Scissors" && computerChoice === "Scissors") {
+        return console.log(`Tie! Play again. ${score}`);
     }
     else if(humanChoice === "Rock" && computerChoice === "Paper") {
-        console.log("You lose! Paper beats rock!");
+        return console.log(`You lose! Paper beats rock! ${score}`);
     }
     else if(humanChoice === "Rock" && computerChoice === "Scissors") {
-        console.log("You win! Rock beats scissors!");
+        return console.log(`You win! Rock beats scissors! ${score}`);
     }
     else if(humanChoice === "Paper" && computerChoice === "Scissors") {
-        console.log("You lose! Scissors beats paper!");
+        return console.log(`You lose! Scissors beats paper! ${score}`);
     }
     else if(humanChoice === "Paper" && computerChoice === "Rock") {
-        console.log("You win! Paper beats rock!");
+        return console.log(`You win! Paper beats rock! ${score}`);
     }
     else if(humanChoice === "Scissors" && computerChoice === "Rock") {
-        console.log("You lose! Rock beats scissors!");
+        return console.log(`You lose! Rock beats scissors!" ${score}`);
     }
     else if(humanChoice === "Scissors" && computerChoice === "Paper") {
-        console.log("You win! Scissors beats paper!");
+        return console.log(`You win! Scissors beats paper!" ${score}`);
     }
    
     }
