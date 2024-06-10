@@ -42,30 +42,35 @@ function playRound() {
     
     let humanScore = 0;
     let computerScore = 0;
-    let humanWins = `Human: ${++humanScore}, Computer: ${computerScore}`;
-    let computerWins = `Human: ${humanScore}, Computer: ${++computerScore}`;
-    let tieGame = `Human: ${humanScore}, Computer: ${computerScore}`;
-    if(humanChoice === "Rock" && computerChoice === "Rock"
+
+    if (humanChoice === "Rock" && computerChoice === "Rock"
         || humanChoice === "Paper" && computerChoice === "Paper"
         || humanChoice === "Scissors" && computerChoice === "Scissors") {
-        return console.log(`Tie! Play again. ${tieGame}`);
+        return console.log(`Tie! Play again. Human score: ${humanScore}, Computer score: ${computerScore}`);
     }
     else if(humanChoice === "Rock" && computerChoice === "Paper") {
-        return console.log(`You lose! Paper beats rock! ${computerWins}`);
+        let computerWins = (++computerScore);
+        return console.log(`You lose! Paper beats rock! Human score: ${humanScore}, Computer score: ${computerWins}`);
     }
     else if(humanChoice === "Rock" && computerChoice === "Scissors") {
-        return console.log(`You win! Rock beats scissors! ${humanWins}`);
+        let humanWins = (++humanScore);
+        return console.log(`You win! Rock beats scissors! Human score: ${humanWins}, Computer score: ${computerScore}`);
     }
     else if(humanChoice === "Paper" && computerChoice === "Scissors") {
-        return console.log(`You lose! Scissors beats paper! ${computerWins}`);
+        let computerWins = (++computerScore);
+        return console.log(`You lose! Scissors beats paper! Human score: ${humanScore}, Computer score: ${computerWins}`);
     }
     else if(humanChoice === "Paper" && computerChoice === "Rock") {
-        return console.log(`You win! Paper beats rock! ${humanWins}`);
+        let humanWins = (++humanScore);
+        return console.log(`You win! Paper beats rock! Human score: ${humanWins}, Computer score: ${computerScore}`);
     }
     else if(humanChoice === "Scissors" && computerChoice === "Rock") {
-        return console.log(`You lose! Rock beats scissors!" ${computerWins}`);
+        let computerWins = (++computerScore);
+        return console.log(`You lose! Rock beats scissors! Human score: ${humanScore}, Computer score: ${computerWins}`);
     }
     else if(humanChoice === "Scissors" && computerChoice === "Paper") {
-        return console.log(`You win! Scissors beats paper!" ${humanWins}`);
-    }  
+        let humanWins = (++humanScore);
+        return console.log(`You win! Scissors beats paper! Human score: ${humanWins}, Computer score: ${computerScore}`);
+    }
+
 }
