@@ -1,17 +1,16 @@
 console.log("Let's play rock, paper, scissors!");
-/*const choices = ["rock", "paper", "scissors"];*/
-
-/*function promptAgain(userInput) {
-    console.log(userInput);
-    while (userInput = false) {
-        console.log(userInput);
-    }
-}*/
 
 function playRound() { 
     function getHumanChoice() {
         const choices = ["rock", "paper", "scissors"];
         let userInput = prompt("Choose rock, paper, or scissors", "Type your choice here").toLowerCase();
+        /*let validateInput = console.log(userInput.includes(!choices));
+        console.log(validateInput); 
+        do {
+         prompt("I said, rock, paper, or scissors!");
+        }
+        while (validateInput==false || undefined);*/
+
         if (userInput === "rock") {
             return "Rock";
         }
@@ -75,3 +74,5 @@ function playRound() {
     }
 
 }
+
+playRound();
