@@ -40,6 +40,11 @@ function playRound() {
 
     console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}`);
 
+    let humanScore = 0;
+    let computerScore = 0;
+    let humanWins = `Human: ${++humanScore}, Computer: ${computerScore}`;
+    let computerWins = `Human: ${humanScore}, Computer: ${++computerScore}`;
+    let tieGame = `Human: ${humanScore}, Computer: ${computerScore}`;
     if(humanChoice === "Rock" && computerChoice === "Rock"
         || humanChoice === "Paper" && computerChoice === "Paper"
         || humanChoice === "Scissors" && computerChoice === "Scissors") {
