@@ -39,7 +39,7 @@ function playRound() {
     var computerChoice = getComputerChoice(); 
 
     console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}`);
-
+    
     let humanScore = 0;
     let computerScore = 0;
     let humanWins = `Human: ${++humanScore}, Computer: ${computerScore}`;
@@ -48,27 +48,27 @@ function playRound() {
     if(humanChoice === "Rock" && computerChoice === "Rock"
         || humanChoice === "Paper" && computerChoice === "Paper"
         || humanChoice === "Scissors" && computerChoice === "Scissors") {
-        return console.log(`Tie! Play again. ${score}`);
+        return console.log(`Tie! Play again. ${tieGame}`);
     }
     else if(humanChoice === "Rock" && computerChoice === "Paper") {
-        return console.log(`You lose! Paper beats rock! ${score}`);
+        return console.log(`You lose! Paper beats rock! ${computerWins}`);
     }
     else if(humanChoice === "Rock" && computerChoice === "Scissors") {
-        return console.log(`You win! Rock beats scissors! ${score}`);
+        return console.log(`You win! Rock beats scissors! ${humanWins}`);
     }
     else if(humanChoice === "Paper" && computerChoice === "Scissors") {
-        return console.log(`You lose! Scissors beats paper! ${score}`);
+        return console.log(`You lose! Scissors beats paper! ${computerWins}`);
     }
     else if(humanChoice === "Paper" && computerChoice === "Rock") {
-        return console.log(`You win! Paper beats rock! ${score}`);
+        return console.log(`You win! Paper beats rock! ${humanWins}`);
     }
     else if(humanChoice === "Scissors" && computerChoice === "Rock") {
-        return console.log(`You lose! Rock beats scissors!" ${score}`);
+        return console.log(`You lose! Rock beats scissors!" ${computerWins}`);
     }
     else if(humanChoice === "Scissors" && computerChoice === "Paper") {
-        return console.log(`You win! Scissors beats paper!" ${score}`);
-    }
-    function getScore(humanChoice, computerChoice) {
+        return console.log(`You win! Scissors beats paper!" ${humanWins}`);
+    }  
+ /*   function getScore(humanChoice, computerChoice) {
     let score = getScore();
         let humanScore = 0;
         let computerScore = 0;
@@ -88,7 +88,7 @@ function playRound() {
             || "Scissors" && "Rock":
                 return console.log(`Human score: ${humanScore}, Computer score: ${++computerScore}`);
         }
-    }        
+    }  */      
 }
 /*
 }
@@ -109,4 +109,4 @@ function getScore() {
     else if (result === console.log("Tie! Play again.")) {
         return console.log(`Human score: ${humanScore}, Computer score: ${computerScore}`);
     }
-}
+} */
