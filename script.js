@@ -10,6 +10,7 @@ console.log("Let's play rock, paper, scissors!");
 
 function playRound() { 
     function getHumanChoice() {
+        const choices = ["rock", "paper", "scissors"];
         let userInput = prompt("Choose rock, paper, or scissors", "Type your choice here").toLowerCase();
         if (userInput === "rock") {
             return "Rock";
