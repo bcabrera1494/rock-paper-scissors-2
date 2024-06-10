@@ -20,7 +20,7 @@ function playRound() {
         else if (userInput === "scissors") {
             return "Scissors"
         }
-    }
+        }
     function getComputerChoice() {
         let randomNumber = (Math.random()*3)
         if (randomNumber <=1) {
