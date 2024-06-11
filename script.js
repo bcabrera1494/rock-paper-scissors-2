@@ -1,7 +1,7 @@
 console.log("Let's play rock, paper, scissors!");
 
 
-playGame(){
+function playGame(){
     function playRound() { 
         function getHumanChoice() {
             const choices = ["rock", "paper", "scissors"];
