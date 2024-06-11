@@ -6,6 +6,13 @@ function playGame(){
         function getHumanChoice() {
             const choices = ["rock", "paper", "scissors"];
             let userInput = prompt("Choose rock, paper, or scissors", "Type your choice here").toLowerCase();
+            for (const validateInput of choices){
+                console.log(validateInput);
+                if (validateInput = false) {
+                    prompt("I said, rock, paper, or scissors!");
+                }
+                else break;
+            }
             /*
             let validateInput = userInput.includes(choices);
             console.log(validateInput); 
