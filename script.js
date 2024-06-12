@@ -4,10 +4,10 @@ console.log("Let's play rock, paper, scissors!");
 function playGame(){
     function playRound() { 
         function getHumanChoice() {
-            const choices = ["rock", "paper", "scissors"];
+            
             let userInput = prompt("Choose rock, paper, or scissors", "Type your choice here").toLowerCase();
             
-            let validateInput = userInput.includes(choices);
+            let validateInput = userInput.includes("rock"||"paper"||"scissors");
             console.log(validateInput); 
             do {
 
