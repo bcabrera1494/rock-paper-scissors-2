@@ -2,7 +2,7 @@ console.log("Let's play rock, paper, scissors!");
 let humanScore = 0;
 let computerScore = 0;
 
-function playGame(){
+function playGame(){    
     function playRound() { 
         function getHumanChoice() {
             
@@ -38,16 +38,14 @@ function playGame(){
             else if (randomNumber >=2 <=3) {
                 return "Scissors";
             }
-        }
-    
+        }    
+        
     
         var humanChoice = getHumanChoice();
         var computerChoice = getComputerChoice(); 
     
         console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}`);
         
-
-
 
         if (humanChoice === computerChoice) {
             return getScore();
@@ -100,17 +98,15 @@ function playGame(){
             return playRound();
         }
         if (humanScore === 5) {
-            return console.log(`Congratulations! You win!`);
+        return console.log(`Congratulations! You win!`);
         }
         else if (computerScore === 5){
             return console.log(`Better luck next time! Computer Wins!`)
         }
-
     }
-    while ((humanScore < 5) || (computerScore < 5)) {
+    for (var round = 0; round < 5; ++round) {
         playRound();
-    }
-
-}        
+        }    
+}
 
 playGame();
