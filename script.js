@@ -13,7 +13,7 @@ function playGame(){
 
              prompt("I said, rock, paper, or scissors!");
                 validateInput;
-            }
+            }*/
                 while (validateInput = false);
     
             if (userInput === "rock") {
