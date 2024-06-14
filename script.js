@@ -108,7 +108,7 @@ function playGame(){
 
     }
     while ((humanScore < 5) || (computerScore < 5)) {
-    playRound();
+        playRound();
     }
 
 }        
