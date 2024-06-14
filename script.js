@@ -1,5 +1,6 @@
 console.log("Let's play rock, paper, scissors!");
-
+let humanScore = 0;
+let computerScore = 0;
 
 function playGame(){
     function playRound() { 
@@ -45,8 +46,7 @@ function playGame(){
     
         console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}`);
         
-        let humanScore = 0;
-        let computerScore = 0;
+
 
 
         if (humanChoice === computerChoice) {
@@ -99,14 +99,17 @@ function playGame(){
             console.log(`Tie! play again`);
             return playRound();
         }
+        if (humanScore === 5) {
+            return console.log(`Congratulations! You win!`);
+        }
+        else if (computerScore === 5){
+            return console.log(`Better luck next time! Computer Wins!`)
+        }
 
     }
-
+    while ((humanScore < 5) || (computerScore < 5)) {
     playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
+    }
 
 }        
 
