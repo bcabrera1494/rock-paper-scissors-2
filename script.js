@@ -79,6 +79,11 @@ function playGame(){
             }
     
     }
+
+    playRound();
+    playRound();
+    playRound();
+    playRound();
     playRound();
 
 }        
