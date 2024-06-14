@@ -72,10 +72,23 @@ function playGame(){
             return console.log(`You lose! Rock beats scissors! Human score: ${humanScore}, Computer score: ${computerWins}`);
         }
         else if(humanChoice === "Scissors" && computerChoice === "Paper") {
-            let humanWins = (++humanScore);
-            return console.log(`You win! Scissors beats paper! Human score: ${humanWins}, Computer score: ${computerScore}`);
+            return console.log(`You win! Scissors beats paper!`);
             }
-    
+        
+        function getScore() {
+            if (humanChoice === "Rock" && computerChoice === "Paper"
+                || humanChoice === "Paper" && computerChoice === "Scissors"
+                || humanChoice === "Scissors" && computerChoice === "Rock") {
+                return ++computerScore
+            }
+            else if (humanChoice === "Rock" && computerChoice === "Scissors"
+                || humanChoice === "Paper" && computerChoice === "Rock"
+                || humanChoice === "Scissors" && computerChoice === "Paper") {
+                return ++humanScore
+                }
+            else return playRound();
+        }
+
     }
 
     playRound();
