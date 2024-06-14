@@ -48,9 +48,7 @@ function playGame(){
         let humanScore = 0;
         let computerScore = 0;
     
-        if (humanChoice === "Rock" && computerChoice === "Rock"
-            || humanChoice === "Paper" && computerChoice === "Paper"
-            || humanChoice === "Scissors" && computerChoice === "Scissors") {
+        if (humanChoice === computerChoice) {
             return console.log(`Tie! Play again. Human score: ${humanScore}, Computer score: ${computerScore}`);
         }
         else if(humanChoice === "Rock" && computerChoice === "Paper") {
