@@ -48,8 +48,7 @@ function playGame(){
         
 
         if (humanChoice === computerChoice) {
-            return getScore();
-
+            return console.log(`Tie!`);
         }
         else if(humanChoice === "Rock" && computerChoice === "Paper") {
             console.log(`You lose! Paper beats rock!`);
