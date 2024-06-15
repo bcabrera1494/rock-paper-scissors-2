@@ -75,7 +75,6 @@ function playGame(){
             getScore();
             return console.log(`Human: ${humanScore}, Computer: ${computerScore}`);
             }
-        
         function getScore() {
             if (humanChoice === "Rock" && computerChoice === "Paper"
                 || humanChoice === "Paper" && computerChoice === "Scissors"
