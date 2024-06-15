@@ -39,14 +39,9 @@ function playGame(){
                 return "Scissors";
             }
         }    
-        
-    
         var humanChoice = getHumanChoice();
         var computerChoice = getComputerChoice(); 
-    
         console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}`);
-        
-
         if (humanChoice === computerChoice) {
             return console.log(`Tie!`);
         }
@@ -101,11 +96,25 @@ function playGame(){
         }
         else if (computerScore === 5){
             return console.log(`Better luck next time! Computer Wins!`)
-        }
-    }
+        }      
+        }        
     for (var round = 0; round < 5; ++round) {
         playRound();
-        }    
+        }
 }
 
 playGame();
+
+function declareWinner(humanScore, computerScore) {
+    if (humanScore === computerScore) {
+    return console.log(`It's a TIE GAME!`);
+    }
+    else if (humanScore > computerScore) {
+    return console.log(`Congratulations! You win!`);
+            }
+    else if (computerScore > humanScore){
+    return console.log(`Better luck next time! Computer Wins!`);
+            } 
+    } 
+
+declareWinner();
