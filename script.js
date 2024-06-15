@@ -87,15 +87,6 @@ function playGame(){
                 || humanChoice === "Scissors" && computerChoice === "Paper") {
                 return ++humanScore
                 }
-            else 
-            console.log(`Tie! play again`);
-            return playRound();
-        }
-        if (humanScore === 5) {
-        return console.log(`Congratulations! You win!`);
-        }
-        else if (computerScore === 5){
-            return console.log(`Better luck next time! Computer Wins!`)
         }      
         }        
     for (var round = 0; round < 5; ++round) {
