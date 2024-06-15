@@ -5,28 +5,18 @@ let computerScore = 0;
 function playGame(){    
     function playRound() { 
         function getHumanChoice() {
-            
-            let userInput = prompt("Choose rock, paper, or scissors", "Type your choice here").toLowerCase();
-            
-            /*let validateInput = userInput.includes("rock"||"paper"||"scissors");
-            console.log(validateInput); 
-            do {
-
-             prompt("I said, rock, paper, or scissors!");
-                validateInput;
-            }*/
-                while (validateInput = false);
-    
-            if (userInput === "rock") {
+            let userInput = prompt ("Choose rock, paper, or scissors", "Type your choice here").toLowerCase();
+                if (userInput === "rock") {
                 return "Rock";
-            }
-            else if (userInput === "paper") {
+                }
+                else if (userInput === "paper") {
                 return "Paper";
+                }
+                else if (userInput === "scissors") {
+                return "Scissors";
+                }
+                else return getHumanChoice();
             }
-            else if (userInput === "scissors") {
-                return "Scissors"
-            }
-        } 
         function getComputerChoice() {
             let randomNumber = (Math.random()*3);
             if (randomNumber <=1) {
@@ -74,7 +64,7 @@ function playGame(){
             console.log(`You win! Scissors beats paper!`)
             getScore();
             return console.log(`Human: ${humanScore}, Computer: ${computerScore}`);
-            }
+            }    
         function getScore() {
             if (humanChoice === "Rock" && computerChoice === "Paper"
                 || humanChoice === "Paper" && computerChoice === "Scissors"
