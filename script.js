@@ -77,10 +77,11 @@ function playGame(){
                 return ++humanScore
                 }
         }      
-        }        
-    for (var round = 0; round < 5; ++round) {
-        playRound();
         }
+    //Remove logit that plays exactly 5 rounds per lesson directions        
+    // for (var round = 0; round < 5; ++round) {
+    //     playRound();
+    //     }
 }
 
 playGame();
