@@ -78,11 +78,13 @@ function playGame(){
                 }
         }      
         }
-    //Remove logit that plays exactly 5 rounds per lesson directions        
+    //Remove logic that plays exactly 5 rounds per lesson directions        
     // for (var round = 0; round < 5; ++round) {
     //     playRound();
     //     }
 }
+//Append buttons to the body of the HTML
+const container = document.querySelector("body");
 //Create button for rock
 const rock = document.createElement('button')
 rock.textContent = 'Rock';
@@ -92,6 +94,12 @@ paper.textContent = 'Paper';
 //Create button for scissors
 const scissors = document.createElement('button');
 scissors.textContent = 'Scissors';
+
+container.appendChild(rock);
+container.appendChild(paper);
+container.appendChild(scissors);
+
+
 
 //Add event listener to playRound function with the correct playerSelection 
 //every time the button is clicked (can keep console.log for this step)
