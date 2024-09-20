@@ -1,4 +1,4 @@
-console.log("Let's play rock, paper, scissors!");
+alert("Let's play rock, paper, scissors!");
 let humanScore = 0;
 let computerScore = 0;
 
