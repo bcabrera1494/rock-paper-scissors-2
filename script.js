@@ -35,39 +35,40 @@ function playGame() {
         }
         var humanChoice = getHumanChoice();
         var computerChoice = getComputerChoice();
-        console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}`);
+
+        console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}`); //Change all console.log to alerts
         if (humanChoice === computerChoice) {
-            return console.log(`Tie!`);
+            return console.log(`Tie!`); // alert
         }
         else if (humanChoice === "Rock" && computerChoice === "Paper") {
-            console.log(`You lose! Paper beats rock!`);
+            console.log(`You lose! Paper beats rock!`); // alert
             getScore();
-            return console.log(`Human: ${humanScore}, Computer: ${computerScore}`);
+            return console.log(`Human: ${humanScore}, Computer: ${computerScore}`); // alert
         }
         else if (humanChoice === "Rock" && computerChoice === "Scissors") {
-            console.log(`You win! Rock beats scissors!`);
-            getScore();
+            console.log(`You win! Rock beats scissors!`); // alert
+            getScore(); //alert
             return console.log(`Human: ${humanScore}, Computer: ${computerScore}`);
         }
         else if (humanChoice === "Paper" && computerChoice === "Scissors") {
-            console.log(`You lose! Scissors beats paper!`);
+            console.log(`You lose! Scissors beats paper!`); // alert
             getScore();
-            return console.log(`Human: ${humanScore}, Computer: ${computerScore}`);
+            return console.log(`Human: ${humanScore}, Computer: ${computerScore}`); // alert
         }
         else if (humanChoice === "Paper" && computerChoice === "Rock") {
-            console.log(`You win! Paper beats rock!`);
+            console.log(`You win! Paper beats rock!`); // alert
             getScore();
-            return console.log(`Human: ${humanScore}, Computer: ${computerScore}`);
+            return console.log(`Human: ${humanScore}, Computer: ${computerScore}`); // alert
         }
         else if (humanChoice === "Scissors" && computerChoice === "Rock") {
-            console.log(`You lose! Rock beats scissors!`);
+            console.log(`You lose! Rock beats scissors!`); // alert
             getScore();
-            return console.log(`Human: ${humanScore}, Computer: ${computerScore}`);
+            return console.log(`Human: ${humanScore}, Computer: ${computerScore}`); // alert
         }
         else if (humanChoice === "Scissors" && computerChoice === "Paper") {
-            console.log(`You win! Scissors beats paper!`)
+            console.log(`You win! Scissors beats paper!`) // alert
             getScore();
-            return console.log(`Human: ${humanScore}, Computer: ${computerScore}`);
+            return console.log(`Human: ${humanScore}, Computer: ${computerScore}`); // alert
         }
         function getScore() {
             if (humanChoice === "Rock" && computerChoice === "Paper"
@@ -111,6 +112,7 @@ results.textContent = 'Score: ';
 //Display the running score, and announce a winner of the game (alert) once one player reaches
 //5 points
 //Will likely have to refactor original code to make it work
+
 playGame();
 
 function declareWinner(humanScore, computerScore) {
