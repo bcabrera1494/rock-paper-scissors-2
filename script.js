@@ -83,6 +83,15 @@ function playGame(){
     //     playRound();
     //     }
 }
+//Create button for rock
+const rock = document.createElement('button')
+rock.textContent = 'Rock';
+//Create button for paper
+const paper = document.createElement('button');
+paper.textContent = 'Paper';
+//Create button for scissors
+const scissors = document.createElement('button');
+scissors.textContent = 'Scissors';
 
 playGame();
 
