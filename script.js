@@ -93,6 +93,12 @@ paper.textContent = 'Paper';
 const scissors = document.createElement('button');
 scissors.textContent = 'Scissors';
 
+//Add event listener to playRound function with the correct playerSelection 
+//every time the button is clicked (can keep console.log for this step)
+//Add a div for displaying results and change all console.log into DOM methods
+//Display the running score, and announce a winner of the game (alert) once one player reaches
+//5 points
+//Will likely have to refactor original code to make it work
 playGame();
 
 function declareWinner(humanScore, computerScore) {
