@@ -4,15 +4,19 @@ let computerScore = 0;
 
 function playGame(){    
     function playRound() { 
+        //Add event listener to playRound function with the correct playerSelection 
+        //every time the button is clicked (can keep console.log for this step)
+
         function getHumanChoice() {
+            // userInput needs to change to prompt, then event listener for click
             let userInput = prompt ("Choose rock, paper, or scissors", "Type your choice here").toLowerCase();
-                if (userInput === "rock") {
+                if (userInput === "rock") { //add event listener for click rock
                 return "Rock";
                 }
-                else if (userInput === "paper") {
+                else if (userInput === "paper") { //add event listener for click paper
                 return "Paper";
                 }
-                else if (userInput === "scissors") {
+                else if (userInput === "scissors") { //add event listener for click scissors
                 return "Scissors";
                 }
                 else return getHumanChoice();
