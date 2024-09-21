@@ -2,8 +2,29 @@ alert("Let's play rock, paper, scissors!");
 let humanScore = 0;
 let computerScore = 0;
 
-function playGame() {
-    function playRound() {
+//Append buttons to the body of the HTML
+const container = document.querySelector("body");
+//Create button for rock
+const rock = document.createElement('button')
+rock.textContent = 'Rock';
+//Create button for paper
+const paper = document.createElement('button');
+paper.textContent = 'Paper';
+//Create button for scissors
+const scissors = document.createElement('button');
+scissors.textContent = 'Scissors';
+
+container.appendChild(rock);
+container.appendChild(paper);
+container.appendChild(scissors);
+
+//Add event listener to buttons that call playRound function with the correct playerSelection 
+//every time the button is clicked (can keep console.log for this step)
+
+const buttons = document.querySelector('button');
+buttons.addEventListener('click', playRound());
+ 
+function playRound() {
         rock.addEventListener('click', (e) => {
             console.log('rock');
         });
