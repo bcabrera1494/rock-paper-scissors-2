@@ -114,9 +114,9 @@ container.appendChild(scissors);
 //Add event listener to buttons that call playRound function with the correct playerSelection 
 //every time the button is clicked (can keep console.log for this step)
 
-rock.addEventListener('click', playRound());
-paper.addEventListener('click', playRound());
-scissors.addEventListener('click', playRound());
+const buttons = document.querySelector('button');
+buttons.addEventListener('click', playRound());
+
 
 //Add a div for displaying results and change all console.log into DOM methods
 const results = document.createElement('div');
