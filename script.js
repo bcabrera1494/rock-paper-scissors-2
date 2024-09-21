@@ -13,20 +13,7 @@ function playGame() {
         scissors.addEventListener('click', (e) => {
             console.log('scissors');
         })
-        // function getHumanChoice() { 
-        //     //need to rework this function so that it responds to clicking the buttons
-        //     // userInput needs to change to alert, then event listener for click
-        //     console.log("Choose rock, paper, or scissors");
-        //     if (userInput === "rock") { //add event listener for click rock
-        //         return "Rock";
-        //     }
-        //     else if (userInput === "paper") { //add event listener for click paper
-        //         return "Paper";
-        //     }
-        //     else if (userInput === "scissors") { //add event listener for click scissors
-        //         return "Scissors";
-        //     }
-        //     else return getHumanChoice();
+
         // }
         //     function getComputerChoice() {
         //         let randomNumber = (Math.random() * 3);
