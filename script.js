@@ -106,15 +106,8 @@ container.appendChild(scissors);
 //every time the button is clicked (can keep console.log for this step)
 
 rock.addEventListener('click', playRound());
-
-paper.addEventListener('click', (e) => {
-    console.log('paper');
-});
-scissors.addEventListener('click', (e) => {
-    console.log('scissors');
-});
-//every time the button is clicked (can keep console.log for this step)
-
+paper.addEventListener('click', playRound());
+scissors.addEventListener('click', playRound());
 
 //Add a div for displaying results and change all console.log into DOM methods
 const results = document.createElement('div');
