@@ -4,8 +4,35 @@ let computerScore = 0;
 
 function playGame() {
     function playRound() {
-        //Add event listener to playRound function with the correct playerSelection 
-        //every time the button is clicked (can keep console.log for this step)
+        // function getHumanChoice() { 
+        //     //need to rework this function so that it responds to clicking the buttons
+        //     // userInput needs to change to alert, then event listener for click
+        //     console.log("Choose rock, paper, or scissors");
+        //     if (userInput === "rock") { //add event listener for click rock
+        //         return "Rock";
+        //     }
+        //     else if (userInput === "paper") { //add event listener for click paper
+        //         return "Paper";
+        //     }
+        //     else if (userInput === "scissors") { //add event listener for click scissors
+        //         return "Scissors";
+        //     }
+        //     else return getHumanChoice();
+        // }
+        //     function getComputerChoice() {
+        //         let randomNumber = (Math.random() * 3);
+        //         if (randomNumber <= 1) {
+        //             return "Rock";
+        //         }
+        //         else if (randomNumber >= 1 <= 2) {
+        //             return "Paper";
+        //         }
+        //         else if (randomNumber >= 2 <= 3) {
+        //             return "Scissors";
+        //         }
+        //     }
+        //     var humanChoice = getHumanChoice();
+        //     var computerChoice = getComputerChoice();
 
         function getHumanChoice() {
             // userInput needs to change to prompt, then event listener for click
