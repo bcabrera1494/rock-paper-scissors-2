@@ -41,6 +41,9 @@ function playRound() {
     //         break;
     //     }
     // });
+    const userChoice = document.createElement('data');
+    userChoice.value = ''
+    buttons.appendChild(userChoice);
     rock.addEventListener('click', (e) => {
         console.log('Rock');
         return 'Rock';
