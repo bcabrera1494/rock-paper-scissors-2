@@ -46,15 +46,18 @@ function playRound() {
     buttons.appendChild(userChoice);
     rock.addEventListener('click', (e) => {
         console.log('Rock');
-        return 'Rock';
+        userChoice.value = 'Rock';
+        return userChoice;
     })
     paper.addEventListener('click', (e) => {
         console.log('Paper');
-        return 'Paper'
+        userChoice.value = 'Paper'
+        return userChoice;
     });
     scissors.addEventListener('click', (e) => {
         console.log('Scissors');
-        return 'Scissors';
+        userChoice.value = 'Scissors'
+        return userChoice;
     });
 
     function getComputerChoice() {
