@@ -81,7 +81,12 @@ function playRound() {
         };
     };
 getComputerChoice();
-alert(`You chose ${userChoice.getAttribute('value')}, Computer chose ${computerChoice.getAttribute('value')}`);
+
+    //Add a div for displaying results and change all console.log into DOM methods
+    const results = document.createElement('div');
+    container.appendChild(results)
+    results.textContent = `You chose ${userChoice.getAttribute('value')}, Computer chose ${computerChoice.getAttribute('value')}.`;
+
     //     if (humanChoice === computerChoice) {
     //         return console.log(`Tie!`); // alert
     //     }
