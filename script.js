@@ -82,11 +82,17 @@ function playRound() {
     };
 getComputerChoice();
 
-    //Add a div for displaying results and change all console.log into DOM methods
-    const results = document.createElement('div');
-    container.appendChild(results)
-    results.textContent = `You chose ${userChoice.getAttribute('value')}, Computer chose ${computerChoice.getAttribute('value')}.`;
+//If button is clicked, continue to show results. Else, prompt user to click? Focus user on buttons?
 
+    function showResults() {
+        const results = document.createElement('div');
+        container.appendChild(results)
+        results.textContent = `You chose ${userChoice.getAttribute('value')}, Computer chose ${computerChoice.getAttribute('value')}.`;
+    
+    };
+showResults();
+    //Add a div for displaying results and change all console.log into DOM methods
+   
     //     if (humanChoice === computerChoice) {
     //         return console.log(`Tie!`); // alert
     //     }
