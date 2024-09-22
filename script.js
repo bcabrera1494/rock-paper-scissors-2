@@ -81,7 +81,7 @@ function playRound() {
         };
     };
 getComputerChoice();
-// alert(`You chose ${userChoice}, Computer chose ${computerChoice}`);
+alert(`You chose ${userChoice.getAttribute('value')}, Computer chose ${computerChoice.getAttribute('value')}`);
     //     if (humanChoice === computerChoice) {
     //         return console.log(`Tie!`); // alert
     //     }
