@@ -30,7 +30,9 @@ buttons.forEach ((button) => {
 });
 
 const userChoice = document.createElement('data');
-userChoice.value = ''
+userChoice.value = '';
+const computerChoice = document.createElement('data');
+computerChoice.value = '';
 
 function playRound() {
     // let humanChoice = document.querySelectorAll('button'); // This is the switch case logic that is supposed to delegate event. Doesn't work.
@@ -49,43 +51,34 @@ function playRound() {
     //         break;
     //     }
     // });
-    const userChoice = document.createElement('data');
-    userChoice.value = ''
-    buttons.appendChild(userChoice);
+
     rock.addEventListener('click', (e) => {
         console.log('Rock');
         userChoice.value = 'Rock';
-        return userChoice.getAttribute('value');
     })
     paper.addEventListener('click', (e) => {
         console.log('Paper');
         userChoice.value = 'Paper'
-        return userChoice.getAttribute('value');
     });
     scissors.addEventListener('click', (e) => {
         console.log('Scissors');
         userChoice.value = 'Scissors'
-        return userChoice.getAttribute('value');
     });
-    const computerChoice = document.createElement('data');
-    computerChoice.value = '';
-    function getComputerChoice() {
+    
 
+    function getComputerChoice() {
         let randomNumber = (Math.random() * 3);
         if (randomNumber <= 1) {
             console.log("Computer chose Rock");
             computerChoice.value = 'Rock';
-            return computerChoice.getAttribute('value');
         }
         else if (randomNumber >= 1 <= 2) {
             console.log("Computer chose Paper")
             computerChoice.value = 'Paper';
-            return computerChoice.getAttribute('value');
         }
         else if (randomNumber >= 2 <= 3) {
             console.log("Computer chose Scissors");
             computerChoice.value = 'Scissors';
-            return computerChoice.getAttribute('value');
         };
     };
 getComputerChoice();
@@ -98,7 +91,7 @@ getComputerChoice();
         results.textContent = `You chose ${userChoice.getAttribute('value')}, Computer chose ${computerChoice.getAttribute('value')}.`;
     
     };
-showResults();
+//showResults();
     //Add a div for displaying results and change all console.log into DOM methods
    
     //     if (humanChoice === computerChoice) {
@@ -152,10 +145,7 @@ showResults();
 
 
 
-//Add a div for displaying results and change all console.log into DOM methods
-const results = document.createElement('div');
-container.appendChild(results)
-results.textContent = 'Current Score:';
+
 //Display the running score, and announce a winner of the game (alert) once one player reaches
 //5 points
 //Will likely have to refactor original code to make it work
