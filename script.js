@@ -61,8 +61,8 @@ function playRound() {
     });
 
     function getComputerChoice() {
-        const computerChoice = document.createElement('data');
-        computerChoice.value = '';
+    const computerChoice = document.createElement('data');
+    computerChoice.value = '';
         let randomNumber = (Math.random() * 3);
         if (randomNumber <= 1) {
             console.log("Computer chose Rock");
