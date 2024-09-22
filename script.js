@@ -15,8 +15,11 @@ const scissors = document.createElement('button');
 scissors.textContent = 'Scissors';
 
 container.appendChild(rock);
+rock.setAttribute('id', 'r');
 container.appendChild(paper);
+paper.setAttribute('id', 'p');
 container.appendChild(scissors);
+scissors.setAttribute('id', 's');
 
 //Add event listener to buttons that call playRound function with the correct playerSelection 
 //every time the button is clicked (can keep console.log for this step)
