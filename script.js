@@ -27,7 +27,7 @@ scissors.setAttribute('id', 's');
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach ((button) => {
-    button.addEventListener('click', () => { 
+    button.addEventListener('mousedown', () => { //Maybe need to use mouse down, then mouse up to fire within playRound"
     playRound();
     });
 });
