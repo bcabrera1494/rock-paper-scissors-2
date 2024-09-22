@@ -47,41 +47,41 @@ function playRound() {
     rock.addEventListener('click', (e) => {
         console.log('Rock');
         userChoice.value = 'Rock';
-        return userChoice;
+        return userChoice.getAttribute('value');
     })
     paper.addEventListener('click', (e) => {
         console.log('Paper');
         userChoice.value = 'Paper'
-        return userChoice;
+        return userChoice.getAttribute('value');
     });
     scissors.addEventListener('click', (e) => {
         console.log('Scissors');
         userChoice.value = 'Scissors'
-        return userChoice;
+        return userChoice.getAttribute('value');
     });
-
-    function getComputerChoice() {
     const computerChoice = document.createElement('data');
     computerChoice.value = '';
+    function getComputerChoice() {
+
         let randomNumber = (Math.random() * 3);
         if (randomNumber <= 1) {
             console.log("Computer chose Rock");
             computerChoice.value = 'Rock';
-            return computerChoice;
+            return computerChoice.getAttribute('value');
         }
         else if (randomNumber >= 1 <= 2) {
             console.log("Computer chose Paper")
             computerChoice.value = 'Paper';
-            return computerChoice;
+            return computerChoice.getAttribute('value');
         }
         else if (randomNumber >= 2 <= 3) {
             console.log("Computer chose Scissors");
             computerChoice.value = 'Scissors';
-            return computerChoice
+            return computerChoice.getAttribute('value');
         };
     };
 getComputerChoice();
-    // alert(`You chose ${humanSelection}, Computer chose ${computerSelection}`);
+// alert(`You chose ${userChoice}, Computer chose ${computerChoice}`);
     //     if (humanChoice === computerChoice) {
     //         return console.log(`Tie!`); // alert
     //     }
@@ -129,7 +129,6 @@ getComputerChoice();
     //     }
     // }
 };
-
 
 
 
