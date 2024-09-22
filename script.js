@@ -25,9 +25,22 @@ const buttons = document.querySelector('button');
 buttons.addEventListener('click', playRound());
  
 function playRound() {
-        rock.addEventListener('click', (e) => {
-            console.log('rock');
-        });
+        // let humanChoice = document.querySelectorAll('button');
+        // humanChoice.addEventListener('click', (event) => {
+        //     let target = event.target;
+
+        // switch(target.id) {
+        //     case 'rock':
+        //         console.log('Rock');
+        //         break;
+        //     case 'paper':
+        //         console.log('Paper');
+        //         break;
+        //     case 'scissors':
+        //         console.log('scissors');
+        //         break;
+        //     }
+        // });
         paper.addEventListener('click', (e) => {
             console.log('paper');
         });
