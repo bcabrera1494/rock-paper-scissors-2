@@ -55,15 +55,15 @@ function playRound() {
     //     }
     // });
 
-    rock.addEventListener('click', (e) => {
+    rock.addEventListener('mouseup', (e) => {
         console.log('Rock');
         userChoice.value = 'Rock';
     })
-    paper.addEventListener('click', (e) => {
+    paper.addEventListener('mouseup', (e) => {
         console.log('Paper');
         userChoice.value = 'Paper'
     });
-    scissors.addEventListener('click', (e) => {
+    scissors.addEventListener('mouseup', (e) => {
         console.log('Scissors');
         userChoice.value = 'Scissors'
     });
