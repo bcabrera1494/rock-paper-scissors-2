@@ -48,23 +48,20 @@ function playRound() {
             console.log('scissors');
         })
 
-        // }
-        //     function getComputerChoice() {
-        //         let randomNumber = (Math.random() * 3);
-        //         if (randomNumber <= 1) {
-        //             return "Rock";
-        //         }
-        //         else if (randomNumber >= 1 <= 2) {
-        //             return "Paper";
-        //         }
-        //         else if (randomNumber >= 2 <= 3) {
-        //             return "Scissors";
-        //         }
-        //     }
-        //     var humanChoice = getHumanChoice();
-        //     var computerChoice = getComputerChoice();
-
-   // alert(`You chose ${humanSelection}, Computer chose ${computerSelection}`);
+    function getComputerChoice() {
+        let randomNumber = (Math.random() * 3);
+        if (randomNumber <= 1) {
+            console.log("Computer chose Rock");
+        }
+        else if (randomNumber >= 1 <= 2) {
+            console.log("Computer chose Paper")
+        }
+        else if (randomNumber >= 2 <= 3) {
+            console.log("Computer chose Scissors");
+        };
+    };
+getComputerChoice();
+    // alert(`You chose ${humanSelection}, Computer chose ${computerSelection}`);
     //     if (humanChoice === computerChoice) {
         //         return console.log(`Tie!`); // alert
         //     }
