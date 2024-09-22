@@ -21,7 +21,7 @@ container.appendChild(scissors);
 //Add event listener to buttons that call playRound function with the correct playerSelection 
 //every time the button is clicked (can keep console.log for this step)
 
-const buttons = document.querySelector('button');
+const buttons = document.querySelectorAll('button');
 buttons.addEventListener('click', playRound());
 
 function playRound() {
