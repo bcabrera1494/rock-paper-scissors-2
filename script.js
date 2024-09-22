@@ -51,8 +51,8 @@ function playRound() {
         //     var humanChoice = getHumanChoice();
         //     var computerChoice = getComputerChoice();
 
-        //     console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}`); //Change all console.log to alerts
-        //     if (humanChoice === computerChoice) {
+   // alert(`You chose ${humanSelection}, Computer chose ${computerSelection}`);
+    //     if (humanChoice === computerChoice) {
         //         return console.log(`Tie!`); // alert
         //     }
         //     else if (humanChoice === "Rock" && computerChoice === "Paper") {
