@@ -42,25 +42,31 @@ function playRound() {
     //     }
     // });
     rock.addEventListener('click', (e) => {
-        console.log('rock');
+        console.log('Rock');
+        return 'Rock';
     })
     paper.addEventListener('click', (e) => {
-        console.log('paper');
+        console.log('Paper');
+        return 'Paper'
     });
     scissors.addEventListener('click', (e) => {
-        console.log('scissors');
+        console.log('Scissors');
+        return 'Scissors';
     });
 
     function getComputerChoice() {
         let randomNumber = (Math.random() * 3);
         if (randomNumber <= 1) {
             console.log("Computer chose Rock");
+            return 'Rock';
         }
         else if (randomNumber >= 1 <= 2) {
             console.log("Computer chose Paper")
+            return 'Paper';
         }
         else if (randomNumber >= 2 <= 3) {
             console.log("Computer chose Scissors");
+            return 'Scissors';
         };
     };
 getComputerChoice();
