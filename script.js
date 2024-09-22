@@ -22,7 +22,15 @@ container.appendChild(scissors);
 //every time the button is clicked (can keep console.log for this step)
 
 const buttons = document.querySelectorAll('button');
-buttons.addEventListener('click', playRound());
+
+buttons.forEach ((button) => {
+    button.addEventListener('click', () => { 
+    playRound();
+    });
+});
+
+const userChoice = document.createElement('data');
+userChoice.value = ''
 
 function playRound() {
     // let humanChoice = document.querySelectorAll('button'); // This is the switch case logic that is supposed to delegate event. Doesn't work.
