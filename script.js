@@ -25,7 +25,6 @@ scissors.setAttribute('id', 's');
 //every time the button is clicked (can keep console.log for this step)
 
 const buttons = document.querySelectorAll('button');
-
 buttons.forEach ((button) => {
     button.addEventListener('mousedown', () => { //Maybe need to use mouse down, then mouse up to fire within playRound"
     playRound();
@@ -38,18 +37,18 @@ const computerChoice = document.createElement('data');
 computerChoice.value = '';
 
 function playRound() {
-    // let humanChoice = document.querySelectorAll('button'); // This is the switch case logic that is supposed to delegate event. Doesn't work.
-    // humanChoice.addEventListener('click', (event) => {
+// This is the switch case logic that is supposed to delegate event. Doesn't work.
+    // buttons.addEventListener('mouseup', (event) => { //Maybe need to use mouse up here to activate user choice logging
     //     let target = event.target;
 
     // switch(target.id) {
-    //     case 'rock':
+    //     case 'r':
     //         console.log('Rock');
     //         break;
-    //     case 'paper':
+    //     case 'p':
     //         console.log('Paper');
     //         break;
-    //     case 'scissors':
+    //     case 's':
     //         console.log('scissors');
     //         break;
     //     }
@@ -94,7 +93,7 @@ getComputerChoice();
         results.textContent = `You chose ${userChoice.getAttribute('value')}, Computer chose ${computerChoice.getAttribute('value')}.`;
     
     };
-//showResults();
+showResults();
     //Add a div for displaying results and change all console.log into DOM methods
    
     //     if (humanChoice === computerChoice) {
