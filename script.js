@@ -66,15 +66,18 @@ function playRound() {
         let randomNumber = (Math.random() * 3);
         if (randomNumber <= 1) {
             console.log("Computer chose Rock");
-            return 'Rock';
+            computerChoice.value = 'Rock';
+            return computerChoice;
         }
         else if (randomNumber >= 1 <= 2) {
             console.log("Computer chose Paper")
-            return 'Paper';
+            computerChoice.value = 'Paper';
+            return computerChoice;
         }
         else if (randomNumber >= 2 <= 3) {
             console.log("Computer chose Scissors");
-            return 'Scissors';
+            computerChoice.value = 'Scissors';
+            return computerChoice
         };
     };
 getComputerChoice();
