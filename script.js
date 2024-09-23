@@ -159,7 +159,9 @@ function playRound() {
 //5 points
 //Will likely have to refactor original code to make it work
 
-// playGame();
+const declareWinner = document.createElement('h1');
+declareWinner.textContent = '';
+container.appendChild(declareWinner);
 
 // function declareWinner(humanScore, computerScore) {
 //     if (humanScore === computerScore) {
