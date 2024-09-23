@@ -74,78 +74,81 @@ function playRound() {
         if (randomNumber <= 1) {
             console.log("Computer chose Rock");
             computerChoice.value = 'Rock';
+            getScore();
         }
         else if (randomNumber >= 1 <= 2) {
             console.log("Computer chose Paper")
             computerChoice.value = 'Paper';
+            getScore();
         }
         else if (randomNumber >= 2 <= 3) {
             console.log("Computer chose Scissors");
             computerChoice.value = 'Scissors';
+            getScore();
         };
     };
     getComputerChoice();
+    
     //Add a div for displaying results and change all console.log into DOM methods
+    const results = document.createElement('div');
+    container.appendChild(results)
+    const score = document.createElement('h2');
+    results.textContent = `You chose ${userChoice.getAttribute('value')}, Computer chose ${computerChoice.getAttribute('value')}.`;
+    score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
+    container.appendChild(score);
+    const msg = document.createElement('h1');
+    container.appendChild(msg);
+    msg.textContent = '';
+    
     function showResults() {
-        const results = document.createElement('div');
-        container.appendChild(results)
-        const score = document.createElement('h1');
-        results.textContent = `You chose ${userChoice.getAttribute('value')}, Computer chose ${computerChoice.getAttribute('value')}.`;
-        score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
-        container.appendChild(score);
-        const msg = document.createElement('h1');
-        container.appendChild(msg);
-        msg.textContent = '';
 
         if (userChoice.value === computerChoice.value) {
             msg.textContent = `Tie!`;
         }
         else if (userChoice.value === "Rock" && computerChoice.value === "Paper") {
             msg.textContent = `You lose! Paper beats rock!`; 
-    //         getScore();
+            getScore();
             score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
         }
         else if (userChoice.value === "Rock" && computerChoice.value === "Scissors") {
             msg.textContent = `You win! Rock beats scissors!`;
-            // getScore();
+            getScore();
             score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
         }
         else if (userChoice.value === "Paper" && computerChoice.value === "Scissors") {
             msg.content = `You lose! Scissors beats paper!`;
-    //         getScore();
+            getScore();
             score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
         }
         else if (userChoice.value === "Paper" && computerChoice.value === "Rock") {
             msg.textContent = `You win! Paper beats rock!`;
-    //         getScore();
+            getScore();
             score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
         }
         else if (userChoice.value === "Scissors" && computerChoice === "Rock") {
             msg.textContent = `You lose! Rock beats scissors!`;
-    //         getScore();
+            getScore();
             score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
         }
         else if (userChoice.value === "Scissors" && computerChoice === "Paper") {
             msg.textContent = `You win! Scissors beats paper!`;
-    //         getScore();
+            getScore();
             score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
         };
-    //     function getScore() {
-    //         if (userChoice.value === "Rock" && computerChoice === "Paper"
-    //             || userChoice.value === "Paper" && computerChoice === "Scissors"
-    //             || userChoice.value === "Scissors" && computerChoice === "Rock") {
-    //             return ++computerScore
-    //         }
-    //         else if (userChoice.value === "Rock" && computerChoice === "Scissors"
-    //             || userChoice.value === "Paper" && computerChoice === "Rock"
-    //             || userChoice.value === "Scissors" && computerChoice === "Paper") {
-    //             return ++humanScore
-    //         };
-    //     };
-    // };
-};
-showResults();
-
+        function getScore() {
+            if (userChoice.value === "Rock" && computerChoice === "Paper"
+                || userChoice.value === "Paper" && computerChoice === "Scissors"
+                || userChoice.value === "Scissors" && computerChoice === "Rock") {
+                ++computerScore;
+            }
+            else if (userChoice.value === "Rock" && computerChoice === "Scissors"
+                || userChoice.value === "Paper" && computerChoice === "Rock"
+                || userChoice.value === "Scissors" && computerChoice === "Paper") {
+                ++humanScore;
+            };
+        };
+    }; 
+    showResults();
 };
 
 
@@ -153,7 +156,9 @@ showResults();
 
 
 
-//Display the running score, and announce a winner of the game (alert) once one player reaches
+
+
+//Display the running score, and announce a winner of the game once one player reaches
 //5 points
 //Will likely have to refactor original code to make it work
 
