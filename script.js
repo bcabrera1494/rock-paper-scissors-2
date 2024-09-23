@@ -163,16 +163,16 @@ const declareWinner = document.createElement('h1');
 declareWinner.textContent = '';
 container.appendChild(declareWinner);
 
-// function declareWinner(humanScore, computerScore) {
-//     if (humanScore === computerScore) {
-//         return console.log(`It's a TIE GAME!`);
-//     }
-//     else if (humanScore > computerScore) {
-//         return console.log(`Congratulations! You win!`);
-//     }
-//     else if (computerScore > humanScore) {
-//         return console.log(`Better luck next time! Computer Wins!`);
-//     }
-// }
+function finalScore(humanScore, computerScore) {
+    if (humanScore === 5 && computerScore === 5) {
+        declareWinner.textContent = `It's a TIE GAME!`;
+    }
+    else if (humanScore === 5 && computerScore < 5) {
+        declareWinner.textContent = `Congratulations! You win!`;
+    }
+    else if (computerScore === 5 && humanScore < 5) {
+        declareWinner.textContent = `Better luck next time! Computer Wins!`;
+    };
+};
 
-// declareWinner();
+finalScore();
