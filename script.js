@@ -89,7 +89,13 @@ function playRound() {
     function showResults() {
         const results = document.createElement('div');
         container.appendChild(results)
+        const score = document.createElement('span');
         results.textContent = `You chose ${userChoice.getAttribute('value')}, Computer chose ${computerChoice.getAttribute('value')}.`;
+        score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
+        container.appendChild(score);
+        const msg = document.createElement('h1');
+        container.appendChild(msg);
+        msg.textContent = '';
     
     };
 showResults();
