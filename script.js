@@ -35,6 +35,7 @@ const userChoice = document.createElement('data');
 userChoice.value = '';
 const computerChoice = document.createElement('data');
 computerChoice.value = '';
+
 function getHumanChoice(){
     rock.addEventListener('mousedown', (e) => {
         console.log('Rock');
@@ -50,6 +51,7 @@ function getHumanChoice(){
     });
     };
     getHumanChoice();
+
 function playRound() {
 // This is the switch case logic that is supposed to delegate event. Doesn't work.
     // buttons.addEventListener('mouseup', (event) => { //Maybe need to use mouse up here to activate user choice logging
@@ -67,8 +69,6 @@ function playRound() {
     //         break;
     //     }
     // });
-    
-
     function getComputerChoice() {
         let randomNumber = (Math.random() * 3);
         if (randomNumber <= 1) {
@@ -85,8 +85,6 @@ function playRound() {
         };
     };
     getComputerChoice();
-
-//If button is clicked, continue to show results. Else, prompt user to click? Focus user on buttons?
 
     function showResults() {
         const results = document.createElement('div');
