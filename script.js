@@ -7,12 +7,15 @@ const container = document.querySelector("body");
 //Create button for rock
 const rock = document.createElement('button');
 rock.textContent = 'Rock';
+rock.setAttribute("style", "color: black; background: grey");
 //Create button for paper
 const paper = document.createElement('button');
 paper.textContent = 'Paper';
+paper.setAttribute("style", "color: black; background: white");
 //Create button for scissors
 const scissors = document.createElement('button');
 scissors.textContent = 'Scissors';
+scissors.setAttribute("style", "color: black; background: pink");
 
 container.appendChild(rock);
 container.appendChild(paper);
