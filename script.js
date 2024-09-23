@@ -15,11 +15,8 @@ const scissors = document.createElement('button');
 scissors.textContent = 'Scissors';
 
 container.appendChild(rock);
-rock.setAttribute('id', 'r');
 container.appendChild(paper);
-paper.setAttribute('id', 'p');
 container.appendChild(scissors);
-scissors.setAttribute('id', 's');
 
 //Add event listener to buttons that call playRound function with the correct playerSelection 
 //every time the button is clicked (can keep console.log for this step)
@@ -53,22 +50,7 @@ function getUserChoice() {
 getUserChoice();
 
 function playRound() {
-    // This is the switch case logic that is supposed to delegate event. Doesn't work.
-    // buttons.addEventListener('mouseup', (event) => { //Maybe need to use mouse up here to activate user choice logging
-    //     let target = event.target;
 
-    // switch(target.id) {
-    //     case 'r':
-    //         console.log('Rock');
-    //         break;
-    //     case 'p':
-    //         console.log('Paper');
-    //         break;
-    //     case 's':
-    //         console.log('scissors');
-    //         break;
-    //     }
-    // });
     function getComputerChoice() {
         let randomNumber = (Math.random() * 3);
         if (randomNumber <= 1) {
@@ -146,18 +128,6 @@ function playRound() {
         };
     }; 
     showResults();
-};
-
-
-
-
-
-
-
-
-//Display the running score, and announce a winner of the game once one player reaches
-//5 points
-//Will likely have to refactor original code to make it work
 
 const declareWinner = document.createElement('h1');
 declareWinner.textContent = '';
@@ -166,13 +136,21 @@ container.appendChild(declareWinner);
 function finalScore(humanScore, computerScore) {
     if (humanScore === 5 && computerScore === 5) {
         declareWinner.textContent = `It's a TIE GAME!`;
-    }
-    else if (humanScore === 5 && computerScore < 5) {
+    };
+    if (humanScore === 5 && computerScore < 5) {
         declareWinner.textContent = `Congratulations! You win!`;
-    }
-    else if (computerScore === 5 && humanScore < 5) {
+    };
+    if (computerScore === 5 && humanScore < 5) {
         declareWinner.textContent = `Better luck next time! Computer Wins!`;
+    };
+    if (computerScore !== 5 && humanScore !== 5){
+        return
     };
 };
 
 finalScore();
+};
+
+//Display the running score, and announce a winner of the game once one player reaches
+//5 points
+
