@@ -26,7 +26,7 @@ scissors.setAttribute('id', 's');
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach ((button) => {
-    button.addEventListener('mousedown', () => { //Maybe need to use mouse down, then mouse up to fire within playRound"
+    button.addEventListener('click', () => { //Maybe need to use mouse down, then mouse up to fire within playRound"
     playRound();
     });
 });
@@ -35,7 +35,21 @@ const userChoice = document.createElement('data');
 userChoice.value = '';
 const computerChoice = document.createElement('data');
 computerChoice.value = '';
-
+function getHumanChoice(){
+    rock.addEventListener('mousedown', (e) => {
+        console.log('Rock');
+        userChoice.value = 'Rock';
+    })
+    paper.addEventListener('mousedown', (e) => {
+        console.log('Paper');
+        userChoice.value = 'Paper'
+    });
+    scissors.addEventListener('mousedown', (e) => {
+        console.log('Scissors');
+        userChoice.value = 'Scissors'
+    });
+    };
+    getHumanChoice();
 function playRound() {
 // This is the switch case logic that is supposed to delegate event. Doesn't work.
     // buttons.addEventListener('mouseup', (event) => { //Maybe need to use mouse up here to activate user choice logging
@@ -53,19 +67,6 @@ function playRound() {
     //         break;
     //     }
     // });
-
-    rock.addEventListener('mouseup', (e) => {
-        console.log('Rock');
-        userChoice.value = 'Rock';
-    })
-    paper.addEventListener('mouseup', (e) => {
-        console.log('Paper');
-        userChoice.value = 'Paper'
-    });
-    scissors.addEventListener('mouseup', (e) => {
-        console.log('Scissors');
-        userChoice.value = 'Scissors'
-    });
     
 
     function getComputerChoice() {
@@ -83,7 +84,7 @@ function playRound() {
             computerChoice.value = 'Scissors';
         };
     };
-getComputerChoice();
+    getComputerChoice();
 
 //If button is clicked, continue to show results. Else, prompt user to click? Focus user on buttons?
 
