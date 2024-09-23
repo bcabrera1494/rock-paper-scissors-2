@@ -74,17 +74,14 @@ function playRound() {
         if (randomNumber <= 1) {
             console.log("Computer chose Rock");
             computerChoice.value = 'Rock';
-            getScore();
         }
         else if (randomNumber >= 1 <= 2) {
             console.log("Computer chose Paper")
             computerChoice.value = 'Paper';
-            getScore();
         }
         else if (randomNumber >= 2 <= 3) {
             console.log("Computer chose Scissors");
             computerChoice.value = 'Scissors';
-            getScore();
         };
     };
     getComputerChoice();
@@ -125,25 +122,25 @@ function playRound() {
             getScore();
             score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
         }
-        else if (userChoice.value === "Scissors" && computerChoice === "Rock") {
+        else if (userChoice.value === "Scissors" && computerChoice.value === "Rock") {
             msg.textContent = `You lose! Rock beats scissors!`;
             getScore();
             score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
         }
-        else if (userChoice.value === "Scissors" && computerChoice === "Paper") {
+        else if (userChoice.value === "Scissors" && computerChoice.value === "Paper") {
             msg.textContent = `You win! Scissors beats paper!`;
             getScore();
             score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
         };
         function getScore() {
-            if (userChoice.value === "Rock" && computerChoice === "Paper"
-                || userChoice.value === "Paper" && computerChoice === "Scissors"
-                || userChoice.value === "Scissors" && computerChoice === "Rock") {
+            if (userChoice.value === "Rock" && computerChoice.value === "Paper"
+                || userChoice.value === "Paper" && computerChoice.value === "Scissors"
+                || userChoice.value === "Scissors" && computerChoice.value === "Rock") {
                 ++computerScore;
             }
-            else if (userChoice.value === "Rock" && computerChoice === "Scissors"
-                || userChoice.value === "Paper" && computerChoice === "Rock"
-                || userChoice.value === "Scissors" && computerChoice === "Paper") {
+            else if (userChoice.value === "Rock" && computerChoice.value === "Scissors"
+                || userChoice.value === "Paper" && computerChoice.value === "Rock"
+                || userChoice.value === "Scissors" && computerChoice.value === "Paper") {
                 ++humanScore;
             };
         };
