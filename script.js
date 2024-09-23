@@ -25,9 +25,9 @@ scissors.setAttribute('id', 's');
 //every time the button is clicked (can keep console.log for this step)
 
 const buttons = document.querySelectorAll('button');
-buttons.forEach ((button) => {
+buttons.forEach((button) => {
     button.addEventListener('click', () => { //Maybe need to use mouse down, then mouse up to fire within playRound"
-    playRound();
+        playRound();
     });
 });
 
@@ -36,7 +36,7 @@ userChoice.value = '';
 const computerChoice = document.createElement('data');
 computerChoice.value = '';
 
-function getHumanChoice(){
+function getUserChoice() {
     rock.addEventListener('mousedown', (e) => {
         console.log('Rock');
         userChoice.value = 'Rock';
@@ -49,11 +49,11 @@ function getHumanChoice(){
         console.log('Scissors');
         userChoice.value = 'Scissors'
     });
-    };
-    getHumanChoice();
+};
+getUserChoice();
 
 function playRound() {
-// This is the switch case logic that is supposed to delegate event. Doesn't work.
+    // This is the switch case logic that is supposed to delegate event. Doesn't work.
     // buttons.addEventListener('mouseup', (event) => { //Maybe need to use mouse up here to activate user choice logging
     //     let target = event.target;
 
@@ -85,11 +85,11 @@ function playRound() {
         };
     };
     getComputerChoice();
-
+    //Add a div for displaying results and change all console.log into DOM methods
     function showResults() {
         const results = document.createElement('div');
         container.appendChild(results)
-        const score = document.createElement('span');
+        const score = document.createElement('h1');
         results.textContent = `You chose ${userChoice.getAttribute('value')}, Computer chose ${computerChoice.getAttribute('value')}.`;
         score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
         container.appendChild(score);
@@ -103,17 +103,17 @@ function playRound() {
         else if (userChoice.value === "Rock" && computerChoice.value === "Paper") {
             msg.textContent = `You lose! Paper beats rock!`; 
     //         getScore();
-            return score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
+            score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
         }
         else if (userChoice.value === "Rock" && computerChoice.value === "Scissors") {
-            msg.textContent = `You win! Rock beats scissors!`
+            msg.textContent = `You win! Rock beats scissors!`;
             // getScore();
             score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
         }
         else if (userChoice.value === "Paper" && computerChoice.value === "Scissors") {
-            msg.content = `You lose! Scissors beats paper!`
+            msg.content = `You lose! Scissors beats paper!`;
     //         getScore();
-            score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`
+            score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
         }
         else if (userChoice.value === "Paper" && computerChoice.value === "Rock") {
             msg.textContent = `You win! Paper beats rock!`;
@@ -131,19 +131,23 @@ function playRound() {
             score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
         };
     //     function getScore() {
-    //         if (humanChoice === "Rock" && computerChoice === "Paper"
-    //             || humanChoice === "Paper" && computerChoice === "Scissors"
-    //             || humanChoice === "Scissors" && computerChoice === "Rock") {
+    //         if (userChoice.value === "Rock" && computerChoice === "Paper"
+    //             || userChoice.value === "Paper" && computerChoice === "Scissors"
+    //             || userChoice.value === "Scissors" && computerChoice === "Rock") {
     //             return ++computerScore
     //         }
-    //         else if (humanChoice === "Rock" && computerChoice === "Scissors"
-    //             || humanChoice === "Paper" && computerChoice === "Rock"
-    //             || humanChoice === "Scissors" && computerChoice === "Paper") {
+    //         else if (userChoice.value === "Rock" && computerChoice === "Scissors"
+    //             || userChoice.value === "Paper" && computerChoice === "Rock"
+    //             || userChoice.value === "Scissors" && computerChoice === "Paper") {
     //             return ++humanScore
-    //         }
-    //     }
-    // }
+    //         };
+    //     };
+    // };
 };
+showResults();
+
+};
+
 
 
 
