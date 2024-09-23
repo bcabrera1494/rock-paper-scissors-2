@@ -97,15 +97,11 @@ function playRound() {
         container.appendChild(msg);
         msg.textContent = '';
     
-    };
-showResults();
-    //Add a div for displaying results and change all console.log into DOM methods
-   
-    //     if (humanChoice === computerChoice) {
-    //         return console.log(`Tie!`); // alert
-    //     }
-    //     else if (humanChoice === "Rock" && computerChoice === "Paper") {
-    //         console.log(`You lose! Paper beats rock!`); // alert
+        if (userChoice.value === computerChoice.value) {
+            msg.textContent = `Tie!`;
+        }
+    //     else if (userChoice.value === "Rock" && computerChoice.value === "Paper") {
+    //         msg.textContent = `You lose! Paper beats rock!`; 
     //         getScore();
     //         return console.log(`Human: ${humanScore}, Computer: ${computerScore}`); // alert
     //     }
