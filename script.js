@@ -78,6 +78,9 @@ function playRound() {
     const msg = document.createElement('h1');
     container.appendChild(msg);
     msg.textContent = '';
+    const declareWinner = document.createElement('h1');
+    declareWinner.textContent = '';
+    container.appendChild(declareWinner);
     
     function showResults() {
 
@@ -129,10 +132,6 @@ function playRound() {
     }; 
     showResults();
 
-const declareWinner = document.createElement('h1');
-declareWinner.textContent = '';
-container.appendChild(declareWinner);
-
 function finalScore(humanScore, computerScore) {
     if (humanScore === 5 && computerScore === 5) {
         declareWinner.textContent = `It's a TIE GAME!`;
@@ -148,7 +147,7 @@ function finalScore(humanScore, computerScore) {
     };
 };
 
-finalScore();
+finalScore(humanScore, computerScore);
 };
 
 //Display the running score, and announce a winner of the game once one player reaches
