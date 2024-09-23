@@ -43,11 +43,11 @@ function getUserChoice() {
     })
     paper.addEventListener('mousedown', (e) => {
         console.log('Paper');
-        userChoice.value = 'Paper'
+        userChoice.value = 'Paper';
     });
     scissors.addEventListener('mousedown', (e) => {
         console.log('Scissors');
-        userChoice.value = 'Scissors'
+        userChoice.value = 'Scissors';
     });
 };
 getUserChoice();
