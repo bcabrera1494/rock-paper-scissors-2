@@ -75,14 +75,18 @@ function playRound() {
     const results = document.createElement('div');
     container.appendChild(results)
     const score = document.createElement('h2');
+    score.setAttribute("style", "color: navy");
+    results.setAttribute("style", "color: navy");
     results.textContent = `You chose ${userChoice.getAttribute('value')}, Computer chose ${computerChoice.getAttribute('value')}.`;
     score.textContent = `Human: ${humanScore}, Computer: ${computerScore}`;
     container.appendChild(score);
     const msg = document.createElement('h1');
+    msg.setAttribute("style", "color: maroon");
     container.appendChild(msg);
     msg.textContent = '';
     const declareWinner = document.createElement('h1');
     declareWinner.textContent = '';
+    declareWinner.setAttribute("style", "color: maroon");
     container.appendChild(declareWinner);
     
     function showResults() {
